@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>
-      {% block title %}Does it work?{% endblock %}
-    </title>
     <meta charset="UTF-8"/>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
+
+    <!-- Primary Meta Tags -->
+    <title>Serve - Local development without the hassle</title>
+    <meta name="title" content="Serve - Local development without the hassle">
+    <meta name="description" content="Easily run Laravel projects in a local environment. No need to install PHP, Node, MySQL or anything!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://useserve.app/">
+    <meta property="og:title" content="Serve - Local development without the hassle">
+    <meta property="og:description" content="Easily run Laravel projects in a local environment. No need to install PHP, Node, MySQL or anything!">
+    <meta property="og:image" content="/static/social.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://useserve.app/">
+    <meta property="twitter:title" content="Serve - Local development without the hassle">
+    <meta property="twitter:description" content="Easily run Laravel projects in a local environment. No need to install PHP, Node, MySQL or anything!">
+    <meta property="twitter:image" content="/static/social.png">
+
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
     <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     {% block head %}{% endblock %}
-    <script src="/js/alpine.js?v={% version %}"></script>
+    <!-- <script src="/js/alpine.js?v={% version %}"></script> -->
+
+    
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="KNYBRXYQ" defer></script>
+    <!-- / Fathom -->
   </head>
-  <body>
+  <body class="font-sans">
     {% block content %}
       {{ content | safe }}
     {% endblock %}

@@ -1,13 +1,107 @@
 {% extends "_includes/default.njk" %}
 
-{% block title %}It does work{% endblock %}
-
 {% block content %}
-  <div class="fixed inset-0 flex justify-center items-center">
-    <div>
-      <span class="text-change">Good design</span><br/>
-      <span class="change">is<br/>as little design<br/>as possible</span><br/>
-      <span x-data="{message:'🤖 Hello World 🤓'}" x-text="message"></span>
-    </div>
-  </div>
+    <section class="bg-indigo-900 overflow-hidden">
+        <div class="relative px-6 md:max-w-sm md:mx-auto md:px-0 lg:max-w-5xl">
+            <div class="hidden lg:block lg:absolute" style="left: -15rem; top: -10rem; z-index: 1;">
+                <svg width="847" height="847" viewBox="0 0 847 847" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M550.549 127.05C550.549 56.8828 493.666 0 423.499 0C353.332 0 296.449 56.8828 296.449 127.05V148.226C296.449 230.088 230.086 296.45 148.224 296.45H127.048C56.8808 296.45 0 353.333 0 423.5C0 493.667 56.8808 550.55 127.048 550.55H148.224C230.086 550.55 296.449 616.912 296.449 698.774V719.95C296.449 790.117 353.332 847 423.499 847C493.666 847 550.549 790.117 550.549 719.95V698.774C550.549 616.912 616.912 550.55 698.774 550.55H719.95C790.117 550.55 847 493.667 847 423.5C847 353.333 790.117 296.45 719.95 296.45H698.774C616.912 296.45 550.549 230.088 550.549 148.226V127.05Z" fill="#383362"/>
+                </svg>
+            </div>
+
+            <header class="py-8 lg:py-12 lg:relative lg:z-10">
+                <a href="/">
+                    <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="31" transform="matrix(1 0 0 -1 31 31)" fill="#ED64A6"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M34.6047 39.4109C34.6047 41.4016 32.9908 43.0155 31 43.0155C29.0092 43.0155 27.3954 41.4016 27.3954 39.4109V38.8101C27.3954 36.4875 25.5125 34.6047 23.1899 34.6047H22.5891C20.5984 34.6046 18.9845 32.9908 18.9845 31C18.9845 29.0092 20.5984 27.3953 22.5891 27.3953H23.1899C25.5125 27.3953 27.3954 25.5125 27.3954 23.1899V22.5891C27.3954 20.5984 29.0092 18.9845 31 18.9845C32.9908 18.9845 34.6047 20.5984 34.6047 22.5891V23.1899C34.6047 25.5125 36.4875 27.3953 38.8101 27.3953H39.4109C41.4016 27.3953 43.0155 29.0092 43.0155 31C43.0155 32.9908 41.4016 34.6047 39.4109 34.6047H38.8101C36.4875 34.6047 34.6047 36.4875 34.6047 38.8101V39.4109Z" fill="#3C366B"/>
+                    </svg>
+                </a>
+            </header>
+
+            <div class="pb-16 pt-8 md:pb-20 lg:grid lg:grid-cols-2 lg:gap-8 lg:pb-24 lg:relative lg:z-10">
+                <div class="space-y-6">
+                    <h1 class="antialised text-3xl text-purple-100 font-semibold leading-tight lg:text-5xl">Local development without the  hassle</h1>
+                    <p class="text-purple-200 text-xl lg:text-2xl">Run Laravel locally without installing anything.</p>
+                    <div class="inline-flex flex-col items-center space-y-2">
+                        <a 
+                            target="_blank" 
+                            href="https://github.com/BjornDCode/serve/releases/latest"
+                            class="inline-block text-pink-100 font-medium bg-pink-500 px-18 py-4 rounded shadow-lg" 
+                        >
+                            Download
+                        </a>
+                        <p class="text-sm text-purple-200">(Currently only available for Mac)</p>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="shadow-lg rounded overflow-hidden">
+                        <img src="/static/hero.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 py-12 space-y-8 md:max-w-sm md:mx-auto md:px-0 lg:max-w-5xl lg:py-20">
+        <h2 class="text-2xl text-gray-900 font-semibold lg:text-3xl">Features</h2>
+
+        <div>
+            <ul class="space-y-8 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+                <li class="space-y-1">
+                    <h3 class="text-xl text-gray-900 font-semibold">GUI</h3>
+                    <p class="text-gray-700 font-light text-lg">
+                        Run your entire local development from a simple interface. You don’t need to open 4 different terminal windows just to get your project up and running.
+                    </p>
+                </li>
+                <li class="space-y-1">
+                    <h3 class="text-xl text-gray-900 font-semibold">Full development environment</h3>
+                    <p class="text-gray-700 font-light text-lg">
+                        A serve project comes with a web server, database, Redis installation and node environment. No need to install anything manually.
+                    </p>
+                </li>
+                <li class="space-y-1">
+                    <h3 class="text-xl text-gray-900 font-semibold">Easily upgrade language versions</h3>
+                    <p class="text-gray-700 font-light text-lg">
+                        Never worry about upgrading PHP, MySQL, Node or Redis again. Simply pick the version to update to and start your project. You can even run different versions in different projects.
+                    </p>
+                </li>
+                <li class="space-y-1">
+                    <h3 class="text-xl text-gray-900 font-semibold">Unified environments for teams</h3>
+                    <p class="text-gray-700 font-light text-lg">
+                        Ensure that all team members are running the same versions, always. A config file is added to your repository that can be committed and used by all developers.                    
+                    </p>
+                </li>
+                <li class="space-y-1">
+                    <h3 class="text-xl text-gray-900 font-semibold">Build on Docker</h3>
+                    <p class="text-gray-700 font-light text-lg">
+                        Get the full power of Docker under the hood, without having to know anything about Docker. If you are a Docker expert you can easily customise the docker file to suit your needs.
+                    </p>
+                </li>
+                <li class="space-y-1">
+                    <h3 class="text-xl text-gray-900 font-semibold">No vendor lock-in</h3>
+                    <p class="text-gray-700 font-light text-lg">
+                        A serve project is a Docker project. If you don’t wanna use Serve anymore you can manually run your project with Docker.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="px-6 py-8 bg-indigo-100 lg:py-20">
+        <div class="space-y-8 md:max-w-sm md:mx-auto lg:max-w-xl">
+            <h2 class="text-2xl text-gray-900 font-semibold lg:text-3xl">Installation</h2>
+
+            <ol class="list-decimal space-y-2 px-4 text-gray-700">
+                <li class="px-2">
+                    <p class="text-gray-700 font-light text-lg">Install and run <a class="font-normal text-pink-500" target="_blank" href="https://www.docker.com/get-started">Docker</a></p>
+                </li>
+                <li class="px-2">
+                    <p class="text-gray-700 font-light text-lg">Install and run <a class="font-normal text-pink-500" target="_blank" href="https://github.com/BjornDCode/serve/releases/latest">Serve</a></p>
+                </li>
+                <li class="px-2">
+                    <p class="text-gray-700 font-light text-lg">Create or import a project</p>
+                </li>
+            </ol>
+        </div>
+    </section>
 {% endblock %}
